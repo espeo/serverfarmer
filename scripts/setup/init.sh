@@ -57,14 +57,6 @@ if [ ! -f /etc/farmconfig ]; then
 			groupadd -g 150 sambashare
 			groupadd -g 160 imapusers
 			# RHEL registered GIDs: 170 avahi-autoipd, 190 systemd-journal
-
-			if [ "$OSTYPE" = "debian" ]; then
-				rm -f /etc/ssh/ssh_host_*
-				dpkg-reconfigure openssh-server
-			elif [ -x /usr/sbin/sshd-keygen ]; then
-				rm -f /etc/ssh/ssh_host_*
-				/usr/sbin/sshd-keygen   # RHEL 7.x
-			fi
 		fi
 
 		echo "initial configuration done, now run /opt/farm/setup.sh once again"
