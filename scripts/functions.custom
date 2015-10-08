@@ -4,9 +4,7 @@
 
 
 ssh_management_key_storage_filename() {
-	server=$1
-	domain="${server##*.}"
-	echo "/etc/local/.ssh/id_backup_$domain"
+	echo "/etc/local/.ssh/id_espeo_admin"
 }
 
 ssh_management_key_string() {
