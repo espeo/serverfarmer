@@ -23,7 +23,6 @@ GENERIC=(
 	/etc/apache2/sites-available
 	/etc/apache2/sites-enabled
 	/etc/apt
-	/etc/apt/sources.list.d
 	/etc/courier
 	/etc/iet
 	/etc/iscsi

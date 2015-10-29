@@ -28,7 +28,6 @@ set_sshd_option $file Protocol 2
 set_sshd_option $file UsePrivilegeSeparation yes
 set_sshd_option $file HostbasedAuthentication no
 set_sshd_option $file PubkeyAuthentication yes
-set_sshd_option $file PasswordAuthentication yes
 set_sshd_option $file PermitEmptyPasswords no
 set_sshd_option $file PermitRootLogin without-password
 set_sshd_option $file StrictModes yes
