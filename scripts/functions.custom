@@ -40,9 +40,9 @@ cacti_ssh_target() {
 }
 
 add_backup_extension() {
-	echo "$1.gpg"
+	echo "$1.gz"
 }
 
 stream_handler() {
-	echo "gpg --encrypt --no-armor --recipient `gpg_backup_key` --batch"
+	echo "gzip -c9"
 }
