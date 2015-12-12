@@ -30,12 +30,12 @@ easily deployed everywhere.
 3. Diff friendly: all configuration templates based on default configuration files
 from each Linux distribution, therefore it's easy to track changes.
 4. Tight integration with Cacti monitoring software.
-5. Great plugins to simplify and automate many admin tasks.
+5. Powerful extensions to simplify and automate many admin tasks.
 
 
 # Market positioning
 
-![Market positioning of Server Farmer, Puppet and Chef](https://raw.githubusercontent.com/tomaszklim/serverfarmer/master/common/positioning.png)
+![Market positioning of Server Farmer, Puppet and Chef](https://raw.githubusercontent.com/serverfarmer/serverfarmer/master/common/positioning.png)
 
 
 # Supported operating systems
