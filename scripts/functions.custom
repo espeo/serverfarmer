@@ -35,6 +35,10 @@ primary_admin_account() {
 	echo "tklim"
 }
 
+notify_phone() {
+	echo "603252633"
+}
+
 cacti_ssh_target() {
 	echo "cacti.espeo.dev:/srv/sites/cacti/external"
 }

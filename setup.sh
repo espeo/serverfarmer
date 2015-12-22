@@ -30,13 +30,11 @@ fi
 bash /opt/farm/scripts/setup/syslog.sh
 bash /opt/farm/scripts/setup/gpg.sh
 bash /opt/farm/scripts/setup/backup.sh
-bash /opt/farm/scripts/setup/midnight.sh
-bash /opt/farm/scripts/setup/snmpd.sh
-bash /opt/farm/scripts/setup/cacti.sh
+bash /opt/farm/scripts/setup/misc.sh
 bash /opt/farm/scripts/setup/keys.sh
-bash /opt/farm/scripts/setup/sshd.sh
-bash /opt/farm/scripts/check/security.sh
+bash /opt/farm/scripts/setup/role.sh sf-secure-fs
+bash /opt/farm/scripts/setup/role.sh sf-secure-sshd
+bash /opt/farm/scripts/setup/role.sh sf-mc-black
 
 echo -n "finished at "
 date
-
