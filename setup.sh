@@ -1,4 +1,5 @@
 #!/bin/bash
+. /opt/farm/scripts/functions.custom
 
 update="/opt/farm /opt/misc `ls -d /opt/sf-* 2>/dev/null`"
 
@@ -28,14 +29,13 @@ if [ "$HWTYPE" = "physical" ]; then
 	bash /opt/farm/scripts/setup/role.sh hardware
 fi
 bash /opt/farm/scripts/setup/syslog.sh
-bash /opt/farm/scripts/setup/gpg.sh
 bash /opt/farm/scripts/setup/backup.sh
 bash /opt/farm/scripts/setup/misc.sh
 bash /opt/farm/scripts/setup/keys.sh
-bash /opt/farm/scripts/setup/role.sh sf-secure-fs
-bash /opt/farm/scripts/setup/role.sh sf-secure-sshd
-bash /opt/farm/scripts/setup/role.sh sf-mc-black
-bash /opt/farm/scripts/setup/role.sh sf-monitoring-newrelic
+
+for E in `default_extensions`; do
+	bash /opt/farm/scripts/setup/role.sh $E
+done
 
 echo -n "finished at "
 date
