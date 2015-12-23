@@ -43,6 +43,18 @@ if [ ! -f /etc/farmconfig ]; then
 
 		/opt/farm/scripts/setup/groups.sh
 
+		if [ "$REGENERATE_HOST_KEYS" != "" ]; then
+			if [ "$OSTYPE" = "debian" ]; then
+				rm -f /etc/ssh/ssh_host_*
+				dpkg-reconfigure openssh-server
+			elif [ -x /usr/sbin/sshd-keygen ]; then
+				rm -f /etc/ssh/ssh_host_*
+				/usr/sbin/sshd-keygen   # RHEL 7.x
+			else
+				echo "unable to regenerate host ssh keys, skipping this step"
+			fi
+		fi
+
 		echo "initial configuration done, now run /opt/farm/setup.sh once again"
 	else
 		echo "error: invalid operating system version, exiting"
