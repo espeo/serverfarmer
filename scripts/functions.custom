@@ -48,7 +48,14 @@ extension_repository() {
 }
 
 default_extensions() {
-	echo "sf-secure-fs sf-secure-sshd sf-mc-black sf-monitoring-newrelic"
+	echo "
+sf-secure-fs
+sf-secure-sshd
+sf-ntp
+sf-mc-black
+sf-monitoring-newrelic
+sf-monitoring-snmpd
+"
 }
 
 add_backup_extension() {
