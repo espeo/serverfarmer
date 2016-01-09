@@ -55,6 +55,7 @@ sf-ntp
 sf-mc-black
 sf-monitoring-newrelic
 sf-monitoring-snmpd
+sf-db-tools
 "
 }
 
