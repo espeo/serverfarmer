@@ -51,6 +51,7 @@ default_extensions() {
 	echo "
 sf-secure-fs
 sf-secure-sshd
+sf-backup
 sf-ntp
 sf-mc-black
 sf-monitoring-newrelic
