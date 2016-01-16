@@ -3,6 +3,14 @@
 # your own company, this should be the first file to change afterwards.
 
 
+external_domain() {
+	echo "tomaszklim.pl"
+}
+
+internal_domain() {
+	echo "espeo.dev"
+}
+
 ssh_management_key_storage_filename() {
 	echo "/etc/local/.ssh/id_espeo_admin"
 }
@@ -17,14 +25,6 @@ gpg_backup_key() {
 
 local_backup_directory() {
 	echo "/espeobackup"
-}
-
-external_domain() {
-	echo "tomaszklim.pl"
-}
-
-internal_domain() {
-	echo "espeo.dev"
 }
 
 management_public_ip_range() {
