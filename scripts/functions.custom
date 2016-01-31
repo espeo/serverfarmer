@@ -11,6 +11,12 @@ internal_domain() {
 	echo "espeo.dev"
 }
 
+ssh_dedicated_key_storage_filename() {
+	server=$1
+	user=$2
+	echo "/etc/local/.ssh/key-$user@$server"
+}
+
 ssh_management_key_storage_filename() {
 	echo "/etc/local/.ssh/id_espeo_admin"
 }
