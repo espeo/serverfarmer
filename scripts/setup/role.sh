@@ -1,7 +1,4 @@
 #!/bin/bash
-# Instalacja pakietów z oprogramowaniem wymaganych do
-# realizacji przez serwer podanej w parametrze roli
-
 . /opt/farm/scripts/init
 . /opt/farm/scripts/functions.custom
 . /opt/farm/scripts/functions.install
@@ -48,6 +45,6 @@ if [ ${role:0:3} = "sf-" ]; then
 		echo "directory /opt/$role busy, skipping extension $role installation"
 	fi
 	if [ -x /opt/$role/setup.sh ]; then
-		bash /opt/$role/setup.sh
+		/opt/$role/setup.sh
 	fi
 fi
