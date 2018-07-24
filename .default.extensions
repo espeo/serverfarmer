@@ -5,7 +5,6 @@ sf-secure-system
 sf-detect-suspicious
 sf-ip-allocs
 sf-ip-fw
-sf-backup
 sf-mc-black
 sf-db-tools
 sf-app-deploy
