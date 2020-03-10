@@ -33,3 +33,18 @@ if [ ${name:0:10} = "heartbeat-" ]; then
 	repo="`/opt/farm/config/get-url-extension-repositories.sh`/$name"
 	/opt/farm/scripts/git/clone.sh $name $repo /opt/heartbeat $name $2
 fi
+
+
+# Espeo private repositories
+
+if [ ${name:0:4} = "esf-" ]; then
+	ext=${name:4}
+	repo="`/opt/farm/config/get-url-espeo-repositories.sh`/$name.git"
+	/opt/farm/scripts/git/clone.sh $name $repo /opt/farm/ext/$ext "extension $name" $2
+fi
+
+if [ ${name:0:4} = "esm-" ]; then
+	ext=${name:4}
+	repo="`/opt/farm/config/get-url-espeo-repositories.sh`/$name.git"
+	/opt/farm/scripts/git/clone.sh $name $repo /opt/farm/mgr/$ext "extension $name" $2
+fi
